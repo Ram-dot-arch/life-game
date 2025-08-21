@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>出典・変更点</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 40px;
+    background-color: #f8f8f8;
+    color: #111;
+  }
+
+  /* 見出しデザイン（h1, h2） */
+  h1, h2 {
+    color: #333;
+  }
+
+  /* 段落やリストのボックスデザイン */
+  p, li {
+    background-color: #fff;
+    padding: 12px;
+    border-radius: 6px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    margin-bottom: 12px;
+  }
+
+  /* 箇条書きリストのインデント */
+  ul {
+    padding-left: 20px;
+  }
+
+  /* ゲームに戻るリンクボタン用 */
+  #backToGame {
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  /* リンクをボタン風に見せるためのデザイン */
+  .link-button {
+    display: inline-block;
+    padding: 8px 16px;
+    font-size: 14px;
+    border-radius: 6px;
+    background: #fff;       /* 白背景 */
+    color: #111;            /* 黒文字 */
+    text-decoration: none;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    transition: background 0.2s, color 0.2s;
+  }
+
+  /* マウスホバー時の色変化 */
+  .link-button:hover {
+    background: #eee;       /* 薄い灰色 */
+    color: #000;
+  }
+
+  /* クリック時の色変化 */
+  .link-button:active {
+    background: #ccc;       /* 濃い灰色 */
+    color: #000;
+  }
+</style>
+</head>
+<body>
+  <!-- ページタイトル -->
+  <h1>ライフゲーム改良版</h1>
+
+  <!-- 出典・参考資料のセクション -->
+  <h2>参考・出典</h2>
+  <p>このプログラムは「WebプログラミングⅡ（第4回：ライフゲームの作成）」の教材を参考に作成しました。</p>
+  <ul>
+    <li>参考教材：WebプログラミングⅡ 第4回 ライフゲーム作成  
+        - セルオートマトンの基本ルールや初期パターンの考え方を参考
+    </li>
+    <li>参考サイト：Conway’s Game of Life（Wikipedia）  
+        - 「グライダーガン」や「ネビュラ」などの初期パターンを参考  
+        <a href="https://ja.wikipedia.org/wiki/%E3%83%A9%E3%82%A4%E3%83%95%E3%82%B2%E3%83%BC%E3%83%A0" target="_blank">リンク</a>
+    </li>
+    </li>
+    <li>参考サイト：CSSコードの書き方プロパティ・タグ一覧
+        - テキストレイアウトなどを参考  
+        <a href="https://webst8.com/code/css-major-basic-property/" target="_blank">リンク</a>
+    </li>
+
+    <li>参考補助：ChatGPTによるコード作成・説明の補助</li>
+  </ul>
+
+  <!-- プログラム拡張内容のセクション -->
+  <h2>本プログラムの拡張</h2>
+  <ul>
+    <li>盤面サイズ変更（40x50）</li>
+    <li>複数初期パターン選択（白紙、ランダム、ネビュラ、グライダーガン）</li>
+    <li>棒グラフによる生きセル数の可視化（ゼロ時は非表示）</li>
+    <li>UIを改良：ボタン風デザイン、白背景リンクボタン、ホバー・クリック時の色変化</li>
+    <li>世代カウンタを表示</li>
+    <li>盤面のセルの色やデザインをフラットカラーで見やすく変更</li>
+  </ul>
+
+  <!-- ゲームに戻るリンクボタン -->
+  <p id="backToGame">
+    <a href="index.html" class="link-button">ゲームに戻る</a>
+  </p>
+
+</body>
+</html>

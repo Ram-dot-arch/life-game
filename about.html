@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>ライフゲームの説明</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 40px;
+        background-color: #f8f8f8;
+        color: #111;
+    }
+    h1 { color: #333; }
+    h2 { color: #555; }
+    p, li {
+        background-color: #fff;
+        padding: 15px;
+        border-radius: 8px;
+        box-shadow: 0 0 5px rgba(0,0,0,0.1);
+        margin-bottom: 12px;
+    }
+    ul { padding-left: 20px; }
+    a { color: #0077cc; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* ゲームに戻るリンクボタン用 */
+    .link-button {
+        display: inline-block;
+        padding: 8px 16px;
+        font-size: 14px;
+        border-radius: 6px;
+        background: #fff;       /* 白背景 */
+        color: #111;            /* 黒文字 */
+        text-decoration: none;
+        cursor: pointer;
+        border: 1px solid #ccc;
+        transition: background 0.2s, color 0.2s;
+    }
+    .link-button:hover {
+        background: #eee;       /* ホバーで薄灰色 */
+        color: #000;
+    }
+    .link-button:active {
+        background: #ccc;       /* クリックで濃灰色 */
+        color: #000;
+    }
+
+    /* ゲームに戻るボタンを中央に配置するためのスタイル */
+    #backToGame {
+        margin-top: 20px;   /* ボタンの上に余白を確保 */
+        text-align: center; /* 中央寄せ */
+    }
+</style>
+</head>
+<body>
+    <h1>ライフゲームの説明</h1>
+
+    <h2>ライフゲームとは</h2>
+    <p>
+        ライフゲームは、イギリスの数学者ジョン・コンウェイによって考案されたセル・オートマトンの一種です。
+        セル（マス）の生死が時間の経過とともに変化し、複雑なパターンが現れます。
+    </p>
+
+    <h2>ルール</h2>
+    <p>
+        誕生：死んでいるセルに隣接する、生きたセルが3つあれば次世代で新たなセルが誕生する<br>
+        生存（維持）：生きているセルに隣接する、生きたセルが2つまたは3つあれば、セルは次世代でも生存する<br>
+        死（過疎）：生きているセルに隣接する生きたセルが1つ以下ならば、次世代で過疎により死滅する<br>
+        死（過密）：生きているセルに隣接する生きたセルが4つ以上ならば、過密により次世代で死滅する
+    </p>
+
+    <h2>初期パターンの選択</h2>
+    <p>ゲーム開始時には以下の4種類の初期パターンを選べます：</p>
+    <ul>
+        <li><strong>白紙</strong>：自分でセルの位置を決めて配置できます。</li>
+        <li><strong>ランダム</strong>：ランダムにセルが配置されます。</li>
+        <li><strong>グライダーガン</strong>：30世代毎にグライダーを打ち出します。</li>
+        <li><strong>銀河</strong>：複雑な銀河状のパターンが初期状態に配置されます。</li>
+    </ul>
+
+    <h2>棒グラフによるセル数の確認</h2>
+    <p>
+        ゲーム画面下には、過去50世代のセルの数を棒グラフで確認できます。
+        これにより、世代ごとの生きセルの変化や増減を視覚的に追うことができます。
+    </p>
+
+    <h2>特徴</h2>
+    <p>
+        ライフゲームでは、初期状態によってさまざまなパターンが出現します。
+        静止するもの、周期的に変化するもの、無限に広がるものなど、多様な挙動を観察できます。
+    </p>
+
+    <!-- ゲーム画面に戻るリンクを配置 -->
+    <p id="backToGame">
+        <a href="index.html" class="link-button">ゲームに戻る</a>
+    </p>
+
+</body>
+</html>

@@ -1,0 +1,154 @@
+/* ==============================
+   全体の基本スタイル
+   - 背景を黒(#111)にし、文字色は白に設定
+   - 中央寄せと余白の調整
+============================== */
+body {
+  font-family: system-ui, sans-serif;
+  text-align: center;
+  background: #111;
+  color: #fff;
+  margin: 0;
+  padding: 20px;
+}
+
+/* ==============================
+   見出し（タイトル）
+============================== */
+h1 {
+  margin-bottom: 10px;
+}
+
+/* ==============================
+   説明ページリンク・戻るリンク
+   - 上下に余白をつけ、中央寄せ
+============================== */
+#explanationLink, #backToGame {
+  text-align: center;
+  margin: 12px 0;
+}
+
+/* ==============================
+   リンクをボタン風にデザイン
+   - 白背景に黒文字
+   - hover時やクリック時の色変化を追加
+============================== */
+.link-button {
+  display: inline-block;
+  padding: 6px 12px;
+  font-size: 14px;
+  border-radius: 4px;
+  background: #fff;       /* 通常は白 */
+  color: #111;            /* 文字色は黒 */
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  border: 1px solid #ccc;
+}
+
+.link-button:hover {
+  background: #eee;       /* ホバー時に薄灰色 */
+  color: #000;
+}
+
+.link-button:active {
+  background: #ccc;       /* クリック時に濃い灰色 */
+  color: #000;
+}
+
+/* ==============================
+   コントロールパネル
+   - 開始、停止、リセットなどのボタン類
+============================== */
+#controls {
+  margin: 10px 0;
+}
+
+/* ===== 各種ボタンのスタイル ===== */
+button {
+  padding: 6px 10px;
+  margin: 0 6px;
+  font-size: 14px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  background: #333;
+  color: #fff;
+  transition: background 0.2s;
+}
+
+button:hover {
+  background: #444;   /* マウスをのせたときに少し明るく */
+}
+
+/* ===== スピード入力欄（数値入力） ===== */
+input[type="number"] {
+  padding: 4px;
+  border-radius: 4px;
+  border: 1px solid #555;
+  background: #222;
+  color: #fff;
+  width: 60px;
+  text-align: center;
+}
+
+/* ==============================
+   盤面（ゲームボード）
+   - gridでセルを並べる
+   - 背景色と枠をつけて区切りやすく
+============================== */
+#board {
+  display: inline-grid;
+  gap: 1px;
+  margin-top: 12px;
+  user-select: none;      /* ドラッグで文字選択されないように */
+  background: #222;
+  border: 2px solid #555;
+}
+
+/* ===== セル（マス目） ===== */
+.cell {
+  width: 16px;
+  height: 16px;
+  background: #111;       /* デフォルトは黒（死んでいる状態） */
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+/* ===== 生きているセルの色 ===== */
+.cell.alive {
+  background-color: #00ffcc;
+}
+
+/* ==============================
+   世代カウンタ
+   - 下に世代数を表示
+============================== */
+#generation {
+  margin-top: 12px;
+  font-weight: bold;
+}
+
+/* ==============================
+   棒グラフ（統計表示）
+   - flexで右寄せ
+   - 縦に棒を伸ばして人口変化を表現
+============================== */
+#stats {
+  display: flex;
+  justify-content: flex-end;  /* 棒を右端に寄せる */
+  align-items: flex-end;      /* 下揃え */
+  height: 150px;
+  margin: 10px auto 20px;
+  border: 1px solid #aaa;
+  padding: 6px;
+  gap: 2px;
+  max-width: 400px;
+}
+
+/* ===== 棒グラフの1本ごとのスタイル ===== */
+.bar {
+  width: 8px;
+  background: linear-gradient(to top, #2196f3, #87cefa); /* 下から上へ青グラデーション */
+  transition: height 0.2s;  /* 高さが変わる時にアニメーション */
+}

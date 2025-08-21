@@ -1,0 +1,56 @@
+<!DOCTYPE html> 
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>ライフゲーム</title>
+  <!-- 外部CSSファイルを読み込み（デザイン・レイアウト用） -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>ライフゲーム改良版</h1>
+
+  <!-- ===== 上部リンク（説明ページ・出典ページ） ===== -->
+  <!-- 横並びで配置。中央寄せ＆間隔を調整 -->
+  <div id="topLinks" style="display: flex; justify-content: center; gap: 10px; margin-bottom: 12px;">
+    <!-- 説明ページへのリンク -->
+    <a href="about.html" class="link-button">ライフゲームの説明を見る</a>
+    <!-- 出典・変更点ページへのリンク -->
+    <a href="source.html" class="link-button">出典・変更点を見る</a>
+  </div>
+
+  <!-- ===== コントロールパネル ===== -->
+  <!-- ユーザーが操作できるボタンや速度調整を配置 -->
+  <div id="controls">
+    <!-- 初期パターン選択プルダウン -->
+    <select id="patternSelect">
+      <option value="blank">白紙</option>
+      <option value="random">ランダム</option>
+      <option value="gliderGun">グライダーガン</option>
+      <option value="nebula">銀河</option>
+    </select>
+    <!-- ゲーム制御ボタン -->
+    <button id="startBtn">開始</button>
+    <button id="stopBtn">停止</button>
+    <button id="stepBtn">1ステップ</button>
+    <button id="resetBtn">リセット</button>
+    <!-- 速度調整（ミリ秒単位） -->
+    <input type="number" id="speed" value="200" style="width:60px;">ms
+  </div>
+
+  <!-- ===== 盤面エリア ===== -->
+  <!-- JavaScriptでセルを生成して配置する -->
+  <div id="board"></div>
+
+  <!-- ===== 世代カウンタ ===== -->
+  <!-- 進行世代数を表示 -->
+  <div id="generation">世代: 0</div>
+
+  <!-- ===== 棒グラフエリア ===== -->
+  <!-- 各世代の生存セル数を可視化 -->
+  <div id="stats"></div>
+
+  <!-- ===== JavaScript読み込み ===== -->
+  <!-- ゲームのロジック（セル更新や描画制御） -->
+  <script src="main.js"></script>
+</body>
+</html>
